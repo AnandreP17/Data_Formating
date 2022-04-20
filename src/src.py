@@ -2,6 +2,7 @@ src_data = []
 distinct_items = []
 results = []
 
+results = [('User Story','All Complete','Num Unique Completed Tasks','Num Unique Incomplete Tasks','Max Completed Task ID')]
 
 def read_src_data():
 #function to read data from source file
@@ -53,4 +54,15 @@ def data_cleanup():
     return(results)
 
 
-print(data_cleanup())
+# print(data_cleanup())
+
+def write_out_data():
+    data_cleanup()
+    out = open('doc folder/output_data.csv','w')
+    for i in range(len(results)):
+        # output_data =
+        # print(output_data)
+        out.write(results[i][0] + ',' + results[i][1]+ ',' + results[i][2]+ ',' + results[i][3]+ ',' + results[i][4]+ '\n')
+    return()
+
+write_out_data()
