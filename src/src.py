@@ -32,6 +32,7 @@ def data_cleanup():
     src_data_count = len(read_src_data())
     distinct_items_count = len(get_distinct_items())
     for x in range(distinct_items_count):
+        #Restes all variables, so it starts on clean varaibles for each item
         max_completed_task_id = 0
         num_unique_completed_tasks =set()
         num_unique_incomplete_tasks =set()
